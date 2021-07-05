@@ -2,7 +2,8 @@
 
 ## 安装依赖库
 ```bash
-
+sudo apt-get install libturbojpeg libturbojpeg0-dev
+sudo ln -s /usr/lib/x86_64-linux-gnu/libturbojpeg.so.0.1.0 /usr/lib/x86_64-linux-gnu/libturbojpeg.so
 sudo apt-get install libboost-all-dev
 sudo apt-get install libprotobuf-dev protobuf-compiler
 # list(APPEND CMAKE_PREFIX_PATH "/usr/include/google/protobuf")
