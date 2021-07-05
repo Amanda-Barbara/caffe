@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 set -e
 
-./build/tools/caffe train --solver=examples/mnist/lenet_solver.prototxt $@
+./cmake-build-debug/tools/caffe-d train --solver=examples/mnist/lenet_solver.prototxt $@
