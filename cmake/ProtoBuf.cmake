@@ -1,6 +1,16 @@
 # Finds Google Protocol Buffers library and compilers and extends
 # the standard cmake script with version and python generation support
 
+#set(CMAKE_INCLUDE_PATH "/usr/include/google/protobuf/")
+#set(CMAKE_LIBRARY_PATH "/usr/lib/x86_64-linux-gnu/")
+
+#set(PROTOBUF_INCLUDE_DIR /usr/include/google/protobuf)
+#set(PROTOBUF_LIBRARIES /usr/lib/x86_64-linux-gnu)
+
+# sudo apt-get install libprotobuf-dev protobuf-compiler
+list(APPEND CMAKE_PREFIX_PATH "/usr/include/google/protobuf")
+list(APPEND CMAKE_PREFIX_PATH "/usr/lib/x86_64-linux-gnu")
+
 find_package( Protobuf REQUIRED )
 list(APPEND Caffe_INCLUDE_DIRS PUBLIC ${PROTOBUF_INCLUDE_DIR})
 list(APPEND Caffe_LINKER_LIBS PUBLIC ${PROTOBUF_LIBRARIES})
